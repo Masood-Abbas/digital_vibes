@@ -1,0 +1,65 @@
+
+        body {
+            background-color: #F8F4EC;
+            color: #25212B;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .vibe-glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(220, 206, 245, 0.5);
+        }
+        .vibe-card-hover {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .vibe-card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(108, 74, 182, 0.15);
+        }
+        .purple-gradient-text {
+            background: linear-gradient(135deg, #6C4AB6 0%, #A076F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .purple-gradient-bg {
+            background: linear-gradient(135deg, #6C4AB6 0%, #523491 100%);
+        }
+    
+/* Digital Vibe mock website — responsive refinements */
+:root { color-scheme: light; }
+html { scroll-padding-top: 100px; }
+body { min-width: 320px; }
+.site-logo { display: block; object-fit: contain; }
+.site-logo--header { width: 44px; height: 44px; border-radius: 10px; mix-blend-mode: multiply; }
+.site-logo--footer { width: 64px; height: 64px; border-radius: 12px; }
+/* Circular icon badges for service and feature highlights. */
+[class~="w-14"][class~="h-14"][class~="rounded-2xl"] {
+  border-radius: 9999px !important;
+}
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid rgba(108,74,182,.35); outline-offset: 3px;
+}
+#contactModal, #serviceModal { overflow-y: auto; }
+#contactModal > div, #serviceModal > div { max-height: calc(100vh - 2rem); overflow-y: auto; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 480px) {
+  .site-logo--header { width: 118px; height: 38px; }
+}
+
+/* Static presentation: disable all motion and hover transforms. */
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+}
+.vibe-card-hover:hover,
+[class~="hover:scale-105"]:hover,
+[class~="group-hover:scale-105"]:hover,
+[class~="hover:-translate-y-0.5"]:hover,
+[class~="group-hover:translate-x-1"]:hover {
+  transform: none !important;
+}
